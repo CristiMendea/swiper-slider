@@ -1,13 +1,16 @@
-import { useState } from 'react'
+
 import MySwiper from './components/MySwiper';
-import './styles.scss';
+import Header from './components/Header';
+import { CartContextProvider } from './store/CartContext';
+
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Product Carousel</h1>
+    <CartContextProvider>
+      <Header />
+      
       <MySwiper />
-    </div>
+    </CartContextProvider>
   );
 };
 
